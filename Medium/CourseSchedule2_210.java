@@ -3,6 +3,7 @@ public class CourseSchedule2_210 {
         int[] empty = new int[0];
         int[] inDegree = new int[numCourses];
         LinkedList<Integer>[] adjList = new LinkedList[numCourses];
+        
         for (int i = 0; i < prerequisites.length; i++) {
             int inVertex = prerequisites[i][0];
             inDegree[inVertex]++;
