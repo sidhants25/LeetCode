@@ -19,7 +19,7 @@ class Node {
 */
 
 public class CloneGraph_133 {
-    
+
     public Node cloneGraph(Node node) {
 
         if (node == null){
@@ -36,9 +36,7 @@ public class CloneGraph_133 {
         while (!queue.isEmpty()) {
 
             curr = queue.removeFirst();
-            if (seen.contains(curr)){
-                break;
-            }
+            
             seen.add(curr);
             
             if (!map.containsKey(curr)) {
@@ -53,7 +51,7 @@ public class CloneGraph_133 {
               
                 map.get(curr).neighbors.add(map.get(n));
                 
-                if(!seen.contains(n)){
+                if(!seen.contains(n) && !queue.contains(n)){
                     queue.add(n);
                     }
             }
