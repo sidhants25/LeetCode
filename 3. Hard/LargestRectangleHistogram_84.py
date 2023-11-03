@@ -1,5 +1,6 @@
 class LargestRectangleHistogram_84(object):
     def largestRectangleArea(self, heights):
+        #O(n) DP solution. Not complete. Failing 7 test cases
         left_area = heights[0]
         left_rects = []
         left_rects.append((1, heights[0], heights[0]))
